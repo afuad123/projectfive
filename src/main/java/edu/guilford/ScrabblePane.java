@@ -26,10 +26,38 @@ public class ScrabblePane extends Pane {
         this.scrabbleset = scrabbleset;
     }
 
-    public void drawWords() {
+    //make a method that displays the word called drawWord()
+    public void drawWord() {
+        //clear the pane
         this.getChildren().clear();
-        for (int i = 0; i < scrabbleset.size(); i++) {
-            this.getChildren().add(scrabbleset.get(i));
+        //get the word from the word object
+        String word = this.word.getWord();
+        //get the length of the word
+        int length = word.length();
+        //get the width of the pane
+        double width = this.getWidth();
+        //get the height of the pane
+        double height = this.getHeight();
+        //get the width of each letter
+        double letterWidth = width / length;
+        //get the height of each letter
+        double letterHeight = height;
+        //loop through the word
+        for (int i = 0; i < length; i++) {
+            //get the letter
+            char letter = word.charAt(i);
+            //create a new ScrabbleTile
+            Tile tile = new Tile(letter, i);
+            //set the width of the tile
+            tile.setWidth(letterWidth);
+            //set the height of the tile
+            tile.setHeight(letterHeight);
+            //set the x position of the tile
+            tile.setX(i * letterWidth);
+            //set the y position of the tile
+            tile.setY(0);
+            //add the tile to the pane
+            this.getChildren().add(tile);
         }
     }
 
