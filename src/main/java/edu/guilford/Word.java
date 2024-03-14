@@ -36,7 +36,7 @@ public class Word implements Comparable<Word> {
      * */
     public Word() {
         //read through the words.txt  file and select a random word from the file that is at least 2 characters long but no greater than 13 characters long.
-        String filePath = "words.txt";
+        String filePath = "edu/guilford/words.txt";
         String word = "";
         try {
             Scanner scanner = new Scanner(ScrabbleFXDriver.class.getResourceAsStream("/" + filePath));
