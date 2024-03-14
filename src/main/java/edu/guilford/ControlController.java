@@ -18,6 +18,9 @@ public class ControlController {
     private Button submitButton;
 
     @FXML
+    private Button randomButton;
+
+    @FXML
     private Label scoreLabel;
     
 
@@ -37,8 +40,8 @@ public class ControlController {
    //display score method that uses drawScore() from scrabblepane
     private void displayScore() {
          scrabblePane.drawScore();
-         //set the text of the score label to the word's score WITHOUT using getWord() or getScore()
-         scoreLabel.setText("The score of the word is: ");
+         //scoreLabel.setText("The score of the word is: ");
+         randomButton.setText("Score Displayed");
           
     }
 
