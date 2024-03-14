@@ -1,8 +1,8 @@
 package edu.guilford;
 
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
 
 public class ScrabblePane extends Pane {
 
@@ -32,16 +32,14 @@ public class ScrabblePane extends Pane {
         this.getChildren().clear();
         //get the score of the word
         int score = word.getScore();
-        //create a new Text object
-        Text text = new Text();
-        //set the text of the Text object to the score
-        text.setText("The score of the word is " + score);
-        //set the x position of the Text object
-        text.setX(0);
-        //set the y position of the Text object
-        text.setY(0);
-        //add the Text object to the pane
-        this.getChildren().add(text);
+        //display the score of the word using a label object
+        Label scoreLabel = new Label("The score of the word is " + score);
+        //set the x position of the label
+        scoreLabel.setLayoutX(0);
+        //set the y position of the label
+        scoreLabel.setLayoutY(0);
+        //add the label to the pane
+        this.getChildren().add(scoreLabel);
     }
         /*super();
         //add a mouse click listener to generate new words             
