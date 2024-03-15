@@ -45,7 +45,7 @@ public class ControlController {
     public void displayScore() {
          scrabblePane.drawScore();
          //scoreLabel.setText("The score of the word is: ");
-         randomButton.setText("Score Displayed");
+        // randomButton.setText("Score Displayed");
           
     }
 

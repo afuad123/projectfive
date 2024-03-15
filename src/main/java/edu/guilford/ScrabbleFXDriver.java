@@ -30,7 +30,7 @@ public class ScrabbleFXDriver extends Application {
           //window for controls
           Stage controlStage = new Stage();
           //build an FXMLLoader object that will load the FXML file and interact with the controller class
-          FXMLLoader loader = new FXMLLoader(getClass().getResource("control.fxml"));
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/guilford/control.fxml"));
           Parent controlRoot = loader.load();
           ControlController controlController = loader.getController();
           controlController.setScrabblePane(root);
