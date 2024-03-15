@@ -25,20 +25,24 @@ public class ControlController {
     
 
     @FXML
-    private void clearScore() {
+    public void clearScore() {
         scrabblePane.getChildren().clear();
         clearButton.setText("Cleared");
     }
 
     @FXML
-    private void submitScore() {
+    public void submitScore() {
         scrabblePane.drawScore();
         submitButton.setText("Submitted");
     }
 
+    public void setScrabblePane(ScrabblePane scrabblePane) {
+        this.scrabblePane = scrabblePane;
+    }
+
    @FXML
    //display score method that uses drawScore() from scrabblepane
-    private void displayScore() {
+    public void displayScore() {
          scrabblePane.drawScore();
          //scoreLabel.setText("The score of the word is: ");
          randomButton.setText("Score Displayed");

@@ -26,6 +26,21 @@ public class ScrabbleFXDriver extends Application {
         scene.getRoot().setStyle("-fx-font-family: 'serif'");
         stage.setScene(scene);
         stage.show();
+
+          //window for controls
+          Stage controlStage = new Stage();
+          //build an FXMLLoader object that will load the FXML file and interact with the controller class
+          FXMLLoader loader = new FXMLLoader(getClass().getResource("control.fxml"));
+          Parent controlRoot = loader.load();
+          ControlController controlController = loader.getController();
+          controlController.setScrabblePane(root);
+          controlController.displayScore();
+          Scene controlScene = new Scene(controlRoot, 300, 200);
+          controlStage.setScene(controlScene);
+          //moves the control panel window to top left
+          //controlStage.setX(20);
+          //controlStage.setY(50);
+          controlStage.show();
     }
 
     static void setRoot(String fxml) throws IOException {
