@@ -2,6 +2,8 @@ package edu.guilford;
 
 import java.util.Random;
 import java.util.Scanner;
+
+import javafx.fxml.FXML;
 /**This is a class definition file for the "Word" class which defines a word object
  * @author: A. Fuad
  * @version: 2/6/2024
@@ -11,10 +13,8 @@ import java.util.Scanner;
 public class Word implements Comparable<Word> {
     //ATTRIBUTES
     
-    /** 
-     * String attribute that stores a word
-     *  */
     private String word;
+    
     /**
      * ScrabbleSet attribute that stores the scrabbleset used along with word
      *  */
@@ -35,7 +35,7 @@ public class Word implements Comparable<Word> {
      * A constructor that generates a  String of random length 3-12 characters and with randomly determined characters
      * */
     public Word() {
-        //read through the words.txt  file and select a random word from the file that is at least 2 characters long but no greater than 13 characters long.
+        // //read through the words.txt  file and select a random word from the file that is at least 2 characters long but no greater than 13 characters long.
         String filePath = "edu/guilford/words.txt";
         String word = "";
         try {

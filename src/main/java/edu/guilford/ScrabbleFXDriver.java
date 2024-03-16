@@ -37,9 +37,6 @@ public class ScrabbleFXDriver extends Application {
           controlController.displayScore();
           Scene controlScene = new Scene(controlRoot, 300, 200);
           controlStage.setScene(controlScene);
-          //moves the control panel window to top left
-          //controlStage.setX(20);
-          //controlStage.setY(50);
           controlStage.show();
     }
 

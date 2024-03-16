@@ -3,6 +3,8 @@ package edu.guilford;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 
 public class ControlController {
     private ScrabblePane scrabblePane;
@@ -22,11 +24,18 @@ public class ControlController {
 
     @FXML
     private Label scoreLabel;
-    
+
+    @FXML
+    private ImageView imageView;
+
+    @FXML
+    private TextField word; 
 
     @FXML
     public void clearScore() {
+        //clear the score from the pane
         scrabblePane.getChildren().clear();
+        //change the text of the clear button
         clearButton.setText("Cleared");
     }
 
@@ -44,9 +53,11 @@ public class ControlController {
    //display score method that uses drawScore() from scrabblepane
     public void displayScore() {
          scrabblePane.drawScore();
-         //scoreLabel.setText("The score of the word is: ");
-        // randomButton.setText("Score Displayed");
           
     }
+
+    
+
+    
 
 }

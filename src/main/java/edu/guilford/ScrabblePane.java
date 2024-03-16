@@ -40,62 +40,10 @@ public class ScrabblePane extends Pane {
         scoreLabel.setLayoutY(0);
         //add the label to the pane
         this.getChildren().add(scoreLabel);
-    }
-        /*super();
-        //add a mouse click listener to generate new words             
-        this.setOnMouseClicked(e -> {
-            scrabbleset = new ScrabbleSet("English");
-            word = new Word();
-            word.getScore();
-            
-        });
-        super();
-        //add a mouse click listener to generate new shapes             
-        this.setOnMouseClicked(e -> {
-            //will generator a random number of shapes
-            tileList.generateTiles();
-            drawShapes();
-        });
-        
-    }
 
-    public void setScrabbleSet(ScrabbleSet scrabbleset) {
-        this.scrabbleset = scrabbleset;
-    }
 
-    //make a method that displays the word called drawWord()
-    public void drawWord() {
-        //clear the pane
-        this.getChildren().clear();
-        //get the word from the word object
-        String word = this.word.getWord();
-        //get the length of the word
-        int length = word.length();
-        //get the width of the pane
-        double width = this.getWidth();
-        //get the height of the pane
-        double height = this.getHeight();
-        //get the width of each letter
-        double letterWidth = width / length;
-        //get the height of each letter
-        double letterHeight = height;
-        //loop through the word
-        for (int i = 0; i < length; i++) {
-            //get the letter
-            char letter = word.charAt(i);
-            //create a new ScrabbleTile
-            Tile tile = new Tile(letter, i);
-            //set the width of the tile
-            tile.setWidth(letterWidth);
-            //set the height of the tile
-            tile.setHeight(letterHeight);
-            //set the x position of the tile
-            tile.setX(i * letterWidth);
-            //set the y position of the tile
-            tile.setY(0);
-        }*/
-        
-    
     }
+        
+}
 
 

@@ -20,14 +20,14 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button contentDisplay="CENTER" mnemonicParsing="false" text="Submit a word" GridPane.rowIndex="1" />
-      <ImageView fitHeight="96.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+      <Button fx:id="submitButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#submitScore" text="Submit a word" GridPane.rowIndex="1" />
+      <ImageView fx:id="imageView" fitHeight="96.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
          <image>
             <Image url="@../../../../../../../../Desktop/scrabble_logo_by_mrentertainment_ddar0o8-fullview.png" />
          </image>
       </ImageView>
       <TextField maxWidth="-Infinity" prefHeight="26.0" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Label text="Scrabble Word Viewer" />
-      <Button mnemonicParsing="false" text="Clear word" GridPane.rowIndex="2" />
+      <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearScore" text="Clear word" GridPane.rowIndex="2" />
    </children>
 </GridPane>
