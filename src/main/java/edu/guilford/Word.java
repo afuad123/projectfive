@@ -96,7 +96,8 @@ public class Word implements Comparable<Word> {
     */
     @Override
     public String toString() {
-        return "Word: " + word + ", Score: " + getScore();
+        //return "Word: " + word + ", Score: " + getScore();
+        return word;
     }
 
 

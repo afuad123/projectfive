@@ -17,27 +17,26 @@ public class ScrabbleFXDriver extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        //main stage
         ScrabblePane root = new ScrabblePane();
         Word word = new Word();
         word.getScore();
-        //root.setWord(word);
-        //root.drawScore();
-        scene = new Scene(root, 800, 800);
+        scene = new Scene(root, 500, 400);
         scene.getRoot().setStyle("-fx-font-family: 'serif'");
         stage.setScene(scene);
         stage.show();
 
-          //window for controls
-          Stage controlStage = new Stage();
-          //build an FXMLLoader object that will load the FXML file and interact with the controller class
-          FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/guilford/control.fxml"));
-          Parent controlRoot = loader.load();
-          ControlController controlController = loader.getController();
-          controlController.setScrabblePane(root);
-          //controlController.displayScore();
-          Scene controlScene = new Scene(controlRoot, 300, 200);
-          controlStage.setScene(controlScene);
-          controlStage.show();
+        //window for controls
+        Stage controlStage = new Stage();
+        //build an FXMLLoader object that will load the FXML file and interact with the controller class
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/guilford/control.fxml"));
+        Parent controlRoot = loader.load();
+        ControlController controlController = loader.getController();
+        controlController.setScrabblePane(root);
+        Scene controlScene = new Scene(controlRoot, 500, 250);
+        controlStage.setScene(controlScene);
+        controlStage.show();
+       
     }
 
     static void setRoot(String fxml) throws IOException {

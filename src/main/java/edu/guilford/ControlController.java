@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
+
 
 public class ControlController {
     private ScrabblePane scrabblePane;
@@ -39,8 +39,9 @@ public class ControlController {
 
     @FXML
     public void submitScore() {
-        scrabblePane.drawScore();
+        scrabbleset = new ScrabbleSet("English");
         scrabblePane.setWord(new Word(this.word.getText(), scrabbleset));
+        scrabblePane.drawScore();
         submitButton.setText("Submitted");
     }
 

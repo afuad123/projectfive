@@ -23,10 +23,10 @@
       <Button fx:id="submitButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#submitScore" text="Submit a word" GridPane.rowIndex="1" />
       <ImageView fx:id="imageView" fitHeight="96.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
          <image>
-            <Image url="@../../../../../../../../Desktop/scrabble_logo_by_mrentertainment_ddar0o8-fullview.png" />
+            <Image url="@scrabble.png" />
          </image>
       </ImageView>
-      <TextField maxWidth="-Infinity" prefHeight="26.0" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="word" maxWidth="-Infinity" prefHeight="26.0" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Label text="Scrabble Word Viewer" />
       <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearScore" text="Clear word" GridPane.rowIndex="2" />
    </children>
