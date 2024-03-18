@@ -20,8 +20,8 @@ public class ScrabbleFXDriver extends Application {
         ScrabblePane root = new ScrabblePane();
         Word word = new Word();
         word.getScore();
-        root.setWord(word);
-        root.drawScore();
+        //root.setWord(word);
+        //root.drawScore();
         scene = new Scene(root, 800, 800);
         scene.getRoot().setStyle("-fx-font-family: 'serif'");
         stage.setScene(scene);
@@ -34,7 +34,7 @@ public class ScrabbleFXDriver extends Application {
           Parent controlRoot = loader.load();
           ControlController controlController = loader.getController();
           controlController.setScrabblePane(root);
-          controlController.displayScore();
+          //controlController.displayScore();
           Scene controlScene = new Scene(controlRoot, 300, 200);
           controlStage.setScene(controlScene);
           controlStage.show();

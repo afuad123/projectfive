@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 
 public class ControlController {
     private ScrabblePane scrabblePane;
+    private ScrabbleSet scrabbleset;
 
     // @FXML
     // private void switchToSecondary() throws IOException {
@@ -26,9 +27,6 @@ public class ControlController {
     private Label scoreLabel;
 
     @FXML
-    private ImageView imageView;
-
-    @FXML
     private TextField word; 
 
     @FXML
@@ -42,6 +40,7 @@ public class ControlController {
     @FXML
     public void submitScore() {
         scrabblePane.drawScore();
+        scrabblePane.setWord(new Word(this.word.getText(), scrabbleset));
         submitButton.setText("Submitted");
     }
 

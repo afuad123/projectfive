@@ -3,7 +3,6 @@ package edu.guilford;
 import java.util.Random;
 import java.util.Scanner;
 
-import javafx.fxml.FXML;
 /**This is a class definition file for the "Word" class which defines a word object
  * @author: A. Fuad
  * @version: 2/6/2024
