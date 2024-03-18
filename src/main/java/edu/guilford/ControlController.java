@@ -10,10 +10,7 @@ public class ControlController {
     private ScrabblePane scrabblePane;
     private ScrabbleSet scrabbleset;
 
-    // @FXML
-    // private void switchToSecondary() throws IOException {
-    //     ScrabbleFXDriver.setRoot("secondary");
-    // }
+    
     @FXML
     private Button clearButton;
 
