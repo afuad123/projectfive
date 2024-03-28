@@ -4,5 +4,4 @@ edu/guilford/ScrabblePane.class
 module-info.class
 edu/guilford/Word.class
 edu/guilford/ScrabbleSet.class
-edu/guilford/TileList.class
 edu/guilford/ScrabbleFXDriver.class
