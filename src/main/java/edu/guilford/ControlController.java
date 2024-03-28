@@ -15,16 +15,19 @@ public class ControlController {
     private Button clearButton;
 
     @FXML
-    private Button submitButton;
+    private Button submitWordButton;
 
     @FXML
-    private Button randomButton;
+    private Button submitFileButton;
 
     @FXML
     private Label scoreLabel;
 
     @FXML
     private TextField word; 
+
+    @FXML
+    private TextField file;
 
     @FXML
     public void clearScore() {
@@ -39,8 +42,16 @@ public class ControlController {
         scrabbleset = new ScrabbleSet("English");
         scrabblePane.setWord(new Word(this.word.getText(), scrabbleset));
         scrabblePane.drawScore();
-        submitButton.setText("Submitted");
+        submitWordButton.setText("Submitted");
     }
+
+    // @FXML
+    // public void submitFile() {
+    //     scrabbleset = new ScrabbleSet("English");
+    //     scrabblePane.setFile(file.getText());
+    //     scrabblePane.drawScore();
+    //     submitWordButton.setText("Submitted");
+    // }
 
     public void setScrabblePane(ScrabblePane scrabblePane) {
         this.scrabblePane = scrabblePane;
