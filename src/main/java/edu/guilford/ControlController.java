@@ -18,13 +18,16 @@ public class ControlController {
     private Button submitWordButton;
 
     @FXML
+    private Button submitLanguageButton;
+
+    @FXML
     private Label scoreLabel;
 
     @FXML
     private TextField word; 
 
     @FXML
-    private TextField file;
+    private TextField language;
 
     @FXML
     public void clearScore() {
@@ -34,8 +37,12 @@ public class ControlController {
     }
 
     @FXML
+    public void submitLanguage() {
+        scrabbleset = new ScrabbleSet(language.getText());
+        scrabblePane.setScrabbleSet(new ScrabbleSet(language.getText()));
+    }
+    @FXML
     public void submitScore() {
-        scrabbleset = new ScrabbleSet("English");
         scrabblePane.setWord(new Word(this.word.getText(), scrabbleset));
         scrabblePane.drawScore();
     }
@@ -46,10 +53,14 @@ public class ControlController {
     }
 
    @FXML
-   //display score method that uses drawScore() from scrabblepane
     public void displayScore() {
          scrabblePane.drawScore();
           
+    }
+
+    @FXML
+    public void displayLanguage() {
+        scrabblePane.setLanguageLabel(language.getText());
     }
 
     

@@ -26,7 +26,7 @@ public class ScrabbleSet {
     public ScrabbleSet(String language) {
         tiles = new Tile[27];
         //if the language is English
-        if (language.equals("English")) {
+        if (language.equals("ENGLISH")) {
             //instantiate a Tile object for each letter in the English Scrabble set
             tiles[0] = new Tile(' ', 0);
             tiles[1] = new Tile('A', 1);
@@ -144,6 +144,7 @@ public class ScrabbleSet {
         return "ScrabbleSet [tiles=" + Arrays.toString(tiles) + ", letterCount="
                 + Arrays.toString(letterCount) + "]";
     }
+
     
     /**Calculates the score of a word
      * @param word the word to calculate the score of
