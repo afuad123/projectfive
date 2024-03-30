@@ -18,9 +18,6 @@ public class ControlController {
     private Button submitWordButton;
 
     @FXML
-    private Button submitFileButton;
-
-    @FXML
     private Label scoreLabel;
 
     @FXML
@@ -34,7 +31,6 @@ public class ControlController {
         //clear the score from the pane
         scrabblePane.getChildren().clear();
         //change the text of the clear button
-        clearButton.setText("Cleared");
     }
 
     @FXML
@@ -42,16 +38,8 @@ public class ControlController {
         scrabbleset = new ScrabbleSet("English");
         scrabblePane.setWord(new Word(this.word.getText(), scrabbleset));
         scrabblePane.drawScore();
-        submitWordButton.setText("Submitted");
     }
 
-    // @FXML
-    // public void submitFile() {
-    //     scrabbleset = new ScrabbleSet("English");
-    //     scrabblePane.setFile(file.getText());
-    //     scrabblePane.drawScore();
-    //     submitWordButton.setText("Submitted");
-    // }
 
     public void setScrabblePane(ScrabblePane scrabblePane) {
         this.scrabblePane = scrabblePane;

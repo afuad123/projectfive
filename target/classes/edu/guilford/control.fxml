@@ -28,7 +28,6 @@
       </ImageView>
       <TextField fx:id="word" maxWidth="-Infinity" prefHeight="26.0" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Label text="Scrabble Word Viewer" />
-      <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearScore" text="Clear word" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button fx:id="submitFileButton" mnemonicParsing="false" onAction="#submitFile" text="FAULTY DO NOT TOUCH" GridPane.rowIndex="2" />
+      <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearScore" text="Clear word" GridPane.rowIndex="2" />
    </children>
 </GridPane>
