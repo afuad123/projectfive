@@ -19,15 +19,13 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="submitWordButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#submitScore" text="Submit a word -&gt;" GridPane.rowIndex="2" />
+      <Button fx:id="submitWordButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#submitScore" text="Submit a word -&gt;" GridPane.rowIndex="1" />
       <ImageView fx:id="imageView" fitHeight="105.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@scrabble.png" />
          </image>
       </ImageView>
-      <TextField fx:id="word" maxWidth="-Infinity" prefHeight="26.0" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="word" maxWidth="-Infinity" prefHeight="26.0" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearScore" text="Clear screen" GridPane.columnIndex="1" />
-      <TextField fx:id="language" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="203.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button fx:id="submitLanguageButton" mnemonicParsing="false" onAction="#submitLanguage" text="Submit a language -&gt;" GridPane.rowIndex="1" />
    </children>
 </GridPane>

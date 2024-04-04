@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 public class ControlController {
     private ScrabblePane scrabblePane;
     private ScrabbleSet scrabbleset;
+    
 
     
     @FXML
@@ -26,8 +27,8 @@ public class ControlController {
     @FXML
     private TextField word; 
 
-    @FXML
-    private TextField language;
+    String userWord = word.getText();
+
 
     @FXML
     public void clearScore() {
@@ -36,11 +37,6 @@ public class ControlController {
         //change the text of the clear button
     }
 
-    @FXML
-    public void submitLanguage() {
-        scrabbleset = new ScrabbleSet(language.getText());
-        scrabblePane.setScrabbleSet(new ScrabbleSet(language.getText()));
-    }
     @FXML
     public void submitScore() {
         scrabblePane.setWord(new Word(this.word.getText(), scrabbleset));
@@ -59,12 +55,45 @@ public class ControlController {
     }
 
     @FXML
-    public void displayLanguage() {
-        scrabblePane.setLanguageLabel(language.getText());
+    public void displayNumberException() {
+        scrabblePane.drawNumberException();
+    } {
+
+
+   
+    try {
+        if (userWord == null || userWord.isEmpty()) {
+            //throw new BadWordException("Please enter a word");
+            scrabblePane.drawEmptyException();
+        }
+    } catch (Exception e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
     }
 
-    
+    /* if (userWord == null || userWord.isEmpty()) {
+        throw new IllegalArgumentException("Please enter a word");
+    }
 
-    
+    if (userLanguage == null || userLanguage.isEmpty()) {
+        throw new IllegalArgumentException("Please enter a language");
+    }
 
-}
+    if (userWord.matches(".*\\d.*")) {
+        throw new IllegalArgumentException("Please enter a word with no numbers");
+    }
+
+    if (userLanguage.matches(".*\\d.*")) {
+        throw new IllegalArgumentException("Please enter a language with no numbers");
+    }
+
+ */
+    }
+
+    private static class BadWordException extends RuntimeException {
+        public BadWordException(String message) {
+            super(message);
+        }
+    }}
+
+

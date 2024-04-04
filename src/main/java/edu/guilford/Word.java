@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Word implements Comparable<Word> {
     //ATTRIBUTES
     
-    private String word;
+     private String word;
     
     /**
      * ScrabbleSet attribute that stores the scrabbleset used along with word
