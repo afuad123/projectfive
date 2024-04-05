@@ -5,4 +5,5 @@ module-info.class
 edu/guilford/Word.class
 edu/guilford/ScrabbleSet.class
 edu/guilford/ControlController$BadWordException.class
+edu/guilford/BadWordException.class
 edu/guilford/ScrabbleFXDriver.class
