@@ -65,8 +65,7 @@ public class ScrabblePane extends GridPane {
     public void drawInvalidWordException () {
         this.getChildren().clear();
         //get the value of the word
-        String stringword = word.toString();
-        Label invalidWordException = new Label("The word " + stringword + " is not a valid word in the English language");
+        Label invalidWordException = new Label("The word is not a valid word in the English language");
         invalidWordException.setLayoutX(0);
         this.getChildren().add(invalidWordException);
         invalidWordException.setLayoutY(20);  
